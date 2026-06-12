@@ -1,0 +1,437 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    gap: 8px;
+}
+
+nav{
+    background-color: rgba(36, 35, 35, 0.45);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(212,160,23,0.2);
+    width:100%;
+    /*top:0;
+    left:0;*/
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    z-index:10;
+}
+
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+nav li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+nav li a:hover{
+    color:#d4a017;
+    
+}
+
+nav li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -6px;
+    left:0;
+    background-color: #d4a017;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+}
+
+nav li a:hover::after{
+    transform: scaleX(1);
+}
+
+.home{
+    background-color: rgb(28, 66, 2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.open{
+    background-image: url("https://images.unsplash.com/photo-1569096651661-820d0de8b4ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVzdGF1cmFudCUyMGV4dGVyaW9yfGVufDB8fDB8fHww"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    padding: 0 12px 12px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 95px;
+    border: 3vh solid rgb(28, 66, 2);
+}
+
+.content1{
+    background-color: rgb(28, 66, 2);
+    color: rgb(245, 245, 218);
+    padding: 12px;
+    border: 2px solid aliceblue;
+    align-content:center;
+    justify-content: center;
+    text-align: center;
+}
+
+.content2{
+    background-color: rgb(28, 66, 2);
+    color: #d4a017;
+    padding: 12px;
+    border: 2px solid #d4a017;
+    align-content:center;
+    justify-content: center;
+    text-align: center;
+}
+
+#button{
+    background-color: #d4a017;
+    border: 2px solid rgb(28, 66, 2);
+    border-radius: 8px;
+    width: fit-content;
+    padding: 8px 15px;
+    font-size: 1.2rem;
+    margin:  auto;
+}
+
+#button a{
+    color: rgb(28, 66, 2);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#button a:hover{
+    color: aliceblue;
+}
+
+#button:hover{
+   transform: scale(1.08);
+   cursor: pointer;
+   background-color: transparent;
+   border-color: aliceblue;
+}
+
+.about-img{
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.about-img img{
+    width: 100%;
+    height: 80vh;
+    display: block;
+    object-fit: cover;
+}
+
+.about{
+    background-color:#cdfab8;
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    padding-bottom: 10vh;
+    padding-top: 10vh;
+    text-align: center;
+}
+
+.menu-img{
+    background-image: url("https://images.unsplash.com/photo-1569096651661-820d0de8b4ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVzdGF1cmFudCUyMGV4dGVyaW9yfGVufDB8fDB8fHww"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.menu{
+    background-color: #cdfab8;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 10%;
+
+
+.menu h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: #222;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.card-content a{
+    color:aliceblue;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #d4a017;
+}
+}
+
+.menu-card{
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.menu-card:hover{
+    transform: translateY(10px);
+    transition: 0.3s ease-in-out;
+}
+
+.menu-card img{
+    height: 180px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+}
+
+.section-title{
+    padding: 5vh;
+
+}
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.order-btn{
+    border: 1px solid black;
+    background-color: rgb(28, 66, 2); 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}   
+
+/*gallery*/
+
+.gallery-img{
+    background-image: url("https://images.unsplash.com/photo-1569096651661-820d0de8b4ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVzdGF1cmFudCUyMGV4dGVyaW9yfGVufDB8fDB8fHww");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.gallery-section {
+    padding: 60px 0;
+    background-color: #cdfab8; 
+    text-align: center;
+}
+
+.gallery-section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #1b3310; 
+}
+
+
+.gallery-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+}
+
+.gallery-track {
+    display: flex;
+    width: max-content; 
+    gap: 20px; 
+    animation: scrollInfinite 25s linear infinite;
+}
+
+.gallery-track img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+
+.gallery-track:hover {
+    animation-play-state: paused;
+}
+
+.gallery-track img:hover {
+    transform: scale(1.03); 
+}
+
+@keyframes scrollInfinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/*Reservation*/
+
+.reservation{
+    background-color: #cdfab8;
+    padding: 8vh;
+    gap: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.reservation table{
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+}
+
+.reservation table input, .reservation table textarea{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #b5dca6;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #2c3e50;
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+.reservation button{
+    border: 2px solid rgb(28, 66, 2);
+    border-radius: 10px;
+    background-color: rgb(28, 66, 2);
+    color: aliceblue;
+    padding: 10px 20px;
+    font-size: 1.0em;
+    font-weight: bold;
+    width: 100%;
+}
+
+button:hover{
+    transition: all ease-in;
+    background-color: transparent;
+    color: rgb(28, 66, 2);
+    cursor: pointer;
+    transform: translateY(-2px);
+
+}
+
+/*Hours*/
+
+.hours-img{
+    background-image: url("https://images.unsplash.com/photo-1569096651661-820d0de8b4ab?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmVzdGF1cmFudCUyMGV4dGVyaW9yfGVufDB8fDB8fHww");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.hours-cnt, .contact{
+    background-color: #cdfab8;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    text-align: center;
+    padding: 15px 5px;
+}
+
+
+/*footer*/
+
+.footer{
+    background-color: rgb(28, 66, 2) ;
+    color: aliceblue;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.footer h3{
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.links{
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 25px auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.links a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.links a:hover{
+    color: #cdfab8;
+    text-decoration: underline;
+}
+
+.footer p{
+    font-size: 0.9rem;
+    opacity: 0.8;
+    border-top: 1px solid rgba(240, 248, 255, 0.1);
+    padding-top: 15px;
+}
